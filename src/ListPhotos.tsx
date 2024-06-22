@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useCallback} from 'react';
 import { Avatar, Button, Card, Text as Tex } from 'react-native-paper';
+import SkeletonCardLoader from './SkeletonCardLoader';
 
 import {
   StatusBar,
@@ -97,6 +98,9 @@ const ListPhotos = ({navigation}) => {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
         contentContainerStyle={styles.scrollViewContent}>
+          {
+            refreshing ? (<SkeletonCardLoader />) : (items)
+          }
         {items}
       </ScrollView>
     </SafeAreaView>
