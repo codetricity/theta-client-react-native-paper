@@ -72,7 +72,7 @@ const ListPhotos = ({navigation}) => {
       key={item.name}
       onPress={() => onSelect(item)}>
     
-      <Card style={styles.card}>
+      <Card style={{width: Dimensions.get('window').width - 38,}}>
         <Card.Title 
           title="Photo" 
           subtitle={item.dateTimeZone} 
