@@ -68,20 +68,21 @@ const ListPhotos = ({navigation}) => {
   const LeftContent = props => <Avatar.Text size={40} label="IM" />;
 
   const items = files.map(item => (
+    
     <TouchableOpacity
-      style={styles.cardWrapper}
+      style={{width: Dimensions.get('window').width - 32,}}
       key={item.name}
       onPress={() => onSelect(item)}>
-    
-      <Card style={{width: Dimensions.get('window').width - 38,}}>
+      <Card style={styles.card}>
         <Card.Title 
-          title="Photo" 
+          title={item.name} 
           subtitle={item.dateTimeZone} 
           left={LeftContent} 
         />
         <Card.Content>
-          <Tex variant="titleLarge">{item.name}</Tex>
-          <Tex variant="bodyMedium">{item?.imageDescription || 'Simple Image'}</Tex>
+          <Tex variant="titleLarge">3684 Hane Manor</Tex>
+          <Tex variant="bodyMedium">{item?.imageDescription || 'Lake Kattiemouth'}</Tex>
+          <Tex variant='bodySmall'>{item?.lat || 'latitude'}, {item?.lng || 'longitude'}</Tex>
         </Card.Content>
         <Card.Cover source={{ uri: item.thumbnailUrl }} />
         <Card.Actions>

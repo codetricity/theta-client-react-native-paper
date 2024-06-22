@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   cardWrapper: {
-    width: '100%',
     marginVertical: 10,
   },
   card: {
