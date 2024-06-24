@@ -65,7 +65,8 @@ const ListPhotos = ({navigation}) => {
   //     </View>
   //   </TouchableOpacity>
   // ));
-  const LeftContent = props => <Avatar.Text size={40} label="IM" />;
+  // const LeftContent = props => <Avatar.Text size={40} label="IM" />;
+  const LeftContent = props => <Avatar.Icon icon="folder" size={40} />;
 
   const items = files.map(item => (
     
